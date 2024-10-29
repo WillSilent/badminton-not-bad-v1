@@ -1,0 +1,37 @@
+<!--pages/usercenter/LoginPage.wxml-->
+<view class="container">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button> 
+
+  <view class="input-field">
+    <text class="label">昵称</text>
+    <input type="nickname" class="input-ui" placeholder="请输入昵称" bindinput="onUsernameInput"/>
+  </view>
+
+  <view class="input-field">
+    <text class="label">性别</text>
+    <van-radio-group
+    class="radio-group"
+      value="{{radio}}"
+      bind:change="onChange"
+      direction="horizontal"
+    >
+    <van-radio class="radio-item" name="1" icon-size="24px">男</van-radio>
+    <van-radio class="radio-item" name="2" icon-size="24px">女</van-radio>
+  </van-radio-group>
+  </view>
+
+  <!-- 生日选择 -->
+  <view class="input-field">
+    <text class="label">生日</text>
+    <picker mode="date" start="1900-01-01" end="2023-12-31" value="{{birthday}}" bindchange="onDateChange">
+      <view class="picker">{{birthday ? birthday : '请选择生日'}}</view>
+    </picker>
+  </view>
+  <view class="input-field">
+    <text class="label">个签</text>
+    <textarea class="description"></textarea>
+  </view>
+  <button class="submit-button" bindtap="submitForm">提交</button>
+</view>

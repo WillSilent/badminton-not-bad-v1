@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.11.7",
+    "tdesign-miniprogram": "^1.7.0",
+    "westore": "^0.1.12",
+    "wxapp-router": "^0.1.12"
+  }
+}
